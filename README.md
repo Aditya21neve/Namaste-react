@@ -1,0 +1,23 @@
+/* 
+Header
+  logo 
+  nav item 
+body 
+  search 
+  card cointer 
+  restro card
+    image
+    name 
+    star
+    time 
+    cuisine
+    delivery time
+
+
+footer
+  copy write 
+  links
+  address
+
+
+*/
