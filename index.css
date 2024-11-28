@@ -2,54 +2,121 @@
   display: flex;
   justify-content: space-between;
   border: 1px solid black;
+  box-sizing: border-box; /* Ensure padding/border doesn't affect width */
 }
 
 .logo {
   width: 150px;
+  box-sizing: border-box; /* Ensure padding/border doesn't affect width */
 }
 
 .nav-item {
   padding: 0px 20px;
 }
-.nav-item > ul {
+.nav-item ul {
   font-size: 24px;
   display: flex;
   list-style-type: none;
+  padding: 0;
+  margin: 0;
 }
 
-.nav-item > ul > li {
+.nav-item ul li {
   padding: 10px;
   margin: 10px;
 }
 .search {
   padding: 10px;
+  width: 200px; /* Add width if needed */
+  border: 1px solid #ccc; /* Optional, if you're styling input */
+  border-radius: 5px; /* Optional, rounded corners for input */
 }
-.res-card {
-  padding: 5px;
-  width: 200px;
-  cursor: pointer;
-  margin: 10px;
-  background-color: rgb(249, 244, 237);
-}
-
-.res-card:hover {
-  border: 1px solid black;
-  border-radius: 5px;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
-  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
-  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
-}
-.res-logo {
-  width: 100%;
-  height: 200px;
-}
+/* Container for restaurant cards */
 .res-container {
   display: flex;
   flex-wrap: wrap;
-  padding: 30px;
+  justify-content: space-between;
+  gap: 10px; /* Space between cards */
+  padding: 10px;
+}
+
+/* Restaurant card */
+.res-card {
+  display: flex;
+  flex-direction: column;
+  width: 300px; /* Set a fixed width for all cards */
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  background-color: #fff;
+  transition: transform 0.3s ease;
+}
+
+.res-card:hover {
+  transform: scale(1.05);
+}
+
+.res-logo {
+  width: 100%; /* Ensure the image takes the full width of the card */
+  height: 180px;
+  object-fit: cover;
+}
+
+.res-info {
+  padding: 15px;
+}
+
+.res-name {
+  font-size: 18px;
+  font-weight: 600;
+  color: #333;
+  margin: 0;
+}
+
+.res-cuisines {
+  font-size: 14px;
+  color: #777;
+  margin: 5px 0;
+}
+
+.res-details {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+  font-size: 14px;
+  color: #555;
+}
+
+.rating,
+.delivery-time {
+  display: flex;
+  align-items: center;
+}
+
+.rating-icon,
+.delivery-icon {
+  width: 20px;
+  margin-right: 5px;
+}
+
+.rating span,
+.delivery-time span {
+  color: #ff7f50;
+}
+
+.delivery-time span {
+  color: #4caf50;
+}
+
+/* Optional: Add responsive design for smaller screens */
+@media (max-width: 768px) {
+  .res-card {
+    max-width: 100%;
+  }
 }
 
 .filter-btn {
+  display: flex;
   padding: 10px;
   background-color: black;
   text-align: center;
@@ -57,5 +124,77 @@
   margin: 20px;
   font-size: large;
   cursor: pointer;
-  
+  border-radius: 5px; /* Optional for rounded button */
+  transition: background-color 0.3s ease;
+}
+
+.filter-btn:hover {
+  background-color: #333; /* Darker shade on hover */
+}
+.shimmer-container {
+  display: flex;
+  flex-wrap: wrap;
+  grid-template-columns: repeat(
+    auto-fill,
+    minmax(280px, 1fr)
+  ); /* Creates a responsive grid */
+  gap: 20px; /* Space between cards */
+  padding: 20px;
+  justify-items: center; /* Centers cards horizontally */
+}
+
+.shimmer-card {
+  margin: 20px;
+  height: 304.4;
+  width: 300px;
+  border-radius: 10px;
+  background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
+  background-size: 200% 100%;
+  animation: shimmer 1.5s infinite linear;
+}
+
+@keyframes shimmer {
+  100% {
+    background-position: -200% 0;
+  }
+}
+
+/* Search box */
+
+.search {
+  display: flex;
+  justify-content: center; /* Center the search box */
+  align-items: center; /* Center the content vertically */
+  padding: 10px;
+  width: 300px; /* Adjust the width as needed */
+  margin: 20px auto; /* Center horizontally */
+  border: 1px solid #ccc; /* Optional, if you're styling the container */
+  border-radius: 5px; /* Optional, rounded corners for container */
+  background-color: #f9f9f9; /* Optional, light background */
+}
+
+.search-box {
+  padding: 10px;
+  width: 80%; /* Adjust the width as needed */
+  border: 1px solid #ccc; /* Border for input */
+  border-radius: 5px 0 0 5px; /* Rounded corners for left side */
+  outline: none; /* Remove default focus outline */
+}
+
+.search-box:focus {
+  border-color: #4caf50; /* Change border color on focus */
+}
+
+.search button {
+  padding: 10px 15px;
+  border: none;
+  border-radius: 0 5px 5px 0; /* Rounded corners for right side */
+  background-color: #4caf50; /* Button background color */
+  color: white; /* Button text color */
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.search button:hover {
+  background-color: #45a049; /* Darker shade on hover */
 }
