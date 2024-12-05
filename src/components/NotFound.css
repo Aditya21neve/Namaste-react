@@ -1,0 +1,45 @@
+/* src/NotFound.css */
+.notfound-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: linear-gradient(45deg, #ff7e5f, #feb47b);
+  font-family: "Arial", sans-serif;
+}
+
+.notfound {
+  text-align: center;
+  color: white;
+  padding: 50px;
+  border-radius: 10px;
+  background-color: rgba(0, 0, 0, 0.5);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+.notfound-title {
+  font-size: 120px;
+  font-weight: bold;
+  margin: 0;
+  letter-spacing: 5px;
+}
+
+.notfound-message {
+  font-size: 18px;
+  margin: 20px 0;
+}
+
+.notfound-link {
+  font-size: 18px;
+  text-decoration: none;
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 5px;
+  background-color: #ff7e5f;
+  transition: all 0.3s ease;
+}
+
+.notfound-link:hover {
+  background-color: #feb47b;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
