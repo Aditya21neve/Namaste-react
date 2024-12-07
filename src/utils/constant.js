@@ -3,3 +3,6 @@ export const CDN_URL =
 
 export const LOGO_URL =
   "https://imgs.search.brave.com/Bbt0rb2lYK3se5N78PSwKZtagv8CvrzTXu_LM_PxMDQ/rs:fit:500:0:0:0/g:ce/aHR0cHM6Ly9pLnBp/bmltZy5jb20vb3Jp/Z2luYWxzL2QxLzU2/L2MzL2QxNTZjMzYw/MGZiNzEzMWZlMmM1/ZDNiNTM0NTU3OWE3/LmpwZw";
+
+export const MENU_API =
+  "https://www.swiggy.com/dapi/menu/pl?page-type=REGULAR_MENU&complete-menu=true&lat=18.61610&lng=73.72860&restaurantId=";

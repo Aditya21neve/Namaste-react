@@ -1,0 +1,121 @@
+/* RestaurantMenu.css */
+
+/* Global Styles */
+
+h1,
+h4 {
+  margin: 0;
+  padding: 0;
+}
+
+h4 {
+  color: #555;
+}
+
+h1 {
+  font-size: 32px;
+  font-weight: bold;
+  color: #222;
+  margin-bottom: 10px;
+}
+
+h4 + h4 {
+  margin-top: 5px;
+}
+
+/* Main Container */
+.restaurant-info-container {
+  max-width: 1200px;
+  margin: 20px auto;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+/* Restaurant Name */
+.restaurant-name {
+  font-size: 28px;
+  font-weight: 600;
+  color: #3c3c3c;
+  margin-bottom: 10px;
+}
+
+/* Rating Section */
+.restaurant-rating {
+  font-size: 16px;
+  font-weight: bold;
+  color: #ffba00;
+}
+
+.restaurant-rating span {
+  font-size: 16px;
+  font-weight: 600;
+  color: #ffba00;
+}
+
+.restaurant-rating::after {
+  content: " ";
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: #ffba00;
+  margin: 0 5px;
+  vertical-align: middle;
+}
+
+/* Cuisines Section */
+.restaurant-cuisines {
+  font-size: 14px;
+  color: #777;
+  font-weight: 500;
+  margin-top: 5px;
+}
+
+/* Outlet Section */
+.restaurant-area {
+  font-size: 14px;
+  color: #777;
+  font-weight: 400;
+  margin-top: 10px;
+}
+
+/* Shimmer Effect (for Loading state) */
+.shimmer-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #f5f5f5;
+}
+
+.shimmer {
+  width: 100%;
+  height: 100px;
+  background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
+  background-size: 200% 100%;
+  animation: shimmer 1.5s infinite linear;
+}
+
+@keyframes shimmer {
+  100% {
+    background-position: -200% 0;
+  }
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+  .restaurant-info-container {
+    padding: 15px;
+  }
+
+  .restaurant-name {
+    font-size: 24px;
+  }
+
+  h4 {
+    font-size: 12px;
+  }
+}

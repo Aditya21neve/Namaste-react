@@ -9,7 +9,7 @@ const ErrorPage = () => {
     <div className="notfound-container">
       <div className="notfound">
         <h1 className="notfound-title">{err.status}</h1>
-        <p className="notfound-message">Oops!</p>
+        <p className="notfound-message">Oops! </p>
         <p className="notfound-message">{err.statusText}</p>
         <Link to="/" className="notfound-link">
           Go back to Homepage
