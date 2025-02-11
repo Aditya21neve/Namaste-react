@@ -9,7 +9,6 @@ import ErrorPage from "./components/ErrorPage";
 import { createBrowserRouter, Outlet, RouterProvider } from "react-router";
 
 const AppLayout = () => {
-  console.log(<Body />);
   return (
     <div className="app">
       <Header />

@@ -1,8 +1,16 @@
 // src/About.js
-import React from "react";
+import React, { useEffect } from "react";
 import "./About.css"; // Import the CSS for styling
+import User from "./User";
 
 const About = () => {
+  useEffect(() => {
+    datafetch();
+  }, []);
+  async function datafetch() {
+    const data = await fetch("https://api.github.com/users/Aditya21neve");
+    const json = await data.json();
+  }
   return (
     <div className="about-container">
       <div className="about-content">
@@ -40,9 +48,10 @@ const About = () => {
           <h3>Our Team</h3>
           <p>
             Our team consists of passionate developers, designers, and
-            strategists who work tirelessly to bring our clients' visions to
-            life.
+            strategists who work tirelessly to bring our clients' visions to is
+            bordinhg life.
           </p>
+          <User />
         </div>
       </div>
     </div>

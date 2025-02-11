@@ -4,7 +4,7 @@ import "./NotFound.css"; // Import the CSS for styling
 
 const ErrorPage = () => {
   const err = useRouteError();
-  console.log(err);
+
   return (
     <div className="notfound-container">
       <div className="notfound">
